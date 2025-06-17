@@ -13,7 +13,9 @@ variable "identity_token" {
 variable "role_arn" {
   type = string
 }
-
+variable "role_arn_alt" {
+  type = string
+}
 variable "default_tags" {
   description = "A map of default tags to apply to all AWS resources"
   type        = map(string)
