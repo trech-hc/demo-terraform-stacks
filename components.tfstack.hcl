@@ -27,7 +27,7 @@ component "lambda" {
   }
 
   providers = {
-    aws     = provider.aws.configurations[each.value]
+    aws     = provider.aws.alternative[each.value]
     archive = provider.archive.this
     local   = provider.local.this
     random  = provider.random.this
@@ -46,7 +46,7 @@ component "api_gateway" {
   }
 
   providers = {
-    aws    = provider.aws.alternative[each.value]
+    aws    = provider.aws.component[each.value]
     random = provider.random.this
   }
 }
