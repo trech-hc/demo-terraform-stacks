@@ -46,7 +46,7 @@ component "api_gateway" {
   }
 
   providers = {
-    aws    = provider.aws.component[each.value]
+    aws    = provider.aws.configurations[each.value]
     random = provider.random.this
   }
 }
