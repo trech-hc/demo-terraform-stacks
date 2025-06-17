@@ -6,5 +6,6 @@ output "lambda_urls" {
 output "hello_urls" {
   type        = list(string)
   description = "URLs for invoking our Lambda functions"
-  value       = [for x in component.api_gateway : x.invoke_url]
+  value       = [for x in component.api_gateway : x.hello_url]
 }
+
